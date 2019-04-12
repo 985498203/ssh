@@ -43,6 +43,7 @@ public class UserController {
 			mav.addObject("bookList", bookList);
 			mav.setViewName("index");
 		} else {
+			System.out.println("session");
 			System.out.println("session中没有username");
 			mav.setViewName("login");
 		}
