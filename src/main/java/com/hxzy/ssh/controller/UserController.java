@@ -38,12 +38,12 @@ public class UserController {
 		String username = (String) session.getAttribute("username");
 
 		if (null != username) {
-			System.out.println("有session");
+			System.out.println("session中有username");
 			List<Book> bookList = bookService.findBookAll();
 			mav.addObject("bookList", bookList);
 			mav.setViewName("index");
 		} else {
-			System.out.println("没有session");
+			System.out.println("session中没有username");
 			mav.setViewName("login");
 		}
 
